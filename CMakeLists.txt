@@ -24,4 +24,8 @@ add_executable(Proyecto2MarcoFabian main.cpp
         Dragon.h
         Mage.h
         Villager.cpp
-        Villager.h)
+        Villager.h
+        Room.cpp
+        Room.h
+        World.cpp
+        World.h)
