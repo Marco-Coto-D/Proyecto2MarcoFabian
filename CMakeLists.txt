@@ -20,4 +20,8 @@ add_executable(Proyecto2MarcoFabian main.cpp
         Enemy.h
         Knight.cpp
         Knight.h
-        Goblin.h)
+        Goblin.h
+        Dragon.h
+        Mage.h
+        Villager.cpp
+        Villager.h)

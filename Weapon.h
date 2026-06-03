@@ -17,6 +17,7 @@ private:
     unique_ptr<DamageStrategy> damageStrategy;
     public:
     Weapon(string name, int baseDamage, unique_ptr<DamageStrategy>);
+    Weapon(const Weapon& other);
     double calculateDamage() const;
     bool operator<(const Weapon& other) const;
     string getName() const;

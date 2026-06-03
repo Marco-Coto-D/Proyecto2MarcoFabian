@@ -10,6 +10,7 @@
 class SwordStrategy : public DamageStrategy{
     public:
     double calculateDamage(int baseDamage) const override;
+    unique_ptr<DamageStrategy> clone() const override;
 };
 
 

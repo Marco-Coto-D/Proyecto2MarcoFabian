@@ -25,8 +25,8 @@ void Knight::sortWeapon() {
     inventory.erase(inventory.begin());
 }
 
-void Knight::addWeapon(unique_ptr<Weapon> other) {
-    inventory.push_back(move(other));
+void Knight::addWeapon(Weapon* other) {
+    inventory.push_back(make_unique<Weapon>(*other));
 }
 
 string Knight::describe() const {
@@ -51,4 +51,8 @@ const Weapon & Knight::getEquippedWeapon() const {
 
 const Armor & Knight::getEquippedArmor() const {
     return *equippedArmor;
+}
+
+void Knight::spendGold(int gold) {
+    this->gold = this->gold - gold;
 }

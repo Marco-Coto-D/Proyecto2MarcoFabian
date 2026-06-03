@@ -7,3 +7,7 @@
 double SwordStrategy::calculateDamage(int baseDamage) const {
     return baseDamage;
 }
+
+unique_ptr<DamageStrategy> SwordStrategy::clone() const {
+    return make_unique<SwordStrategy>();
+}

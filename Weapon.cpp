@@ -10,6 +10,12 @@ Weapon::Weapon(string name, int baseDamage, unique_ptr<DamageStrategy> damageStr
     this-> damageStrategy = move(damageStrategy);
 }
 
+Weapon::Weapon(const Weapon &other) {
+    this->name = other.name;
+    this->baseDamage = other.baseDamage;
+    this->damageStrategy = other.damageStrategy->clone();
+}
+
 double Weapon::calculateDamage() const {
     return damageStrategy->calculateDamage(baseDamage);
 }

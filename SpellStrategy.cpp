@@ -16,3 +16,7 @@ bool SpellStrategy::canCast() const{
 double SpellStrategy::calculateDamage(int baseDamage) const {
     return baseDamage * 1.5;
 }
+
+unique_ptr<DamageStrategy> SpellStrategy::clone() const {
+    return make_unique<SpellStrategy>(maxMana);
+}

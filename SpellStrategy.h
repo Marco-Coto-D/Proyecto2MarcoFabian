@@ -15,6 +15,7 @@ class SpellStrategy : public DamageStrategy {
     SpellStrategy(int maxMana);
     bool canCast() const;
     double calculateDamage(int baseDamage) const override;
+    unique_ptr<DamageStrategy> clone() const override;
 };
 
 

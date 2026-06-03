@@ -7,3 +7,7 @@
 double BowStrategy::calculateDamage(int baseDamage) const {
     return baseDamage - 2;
 }
+
+unique_ptr<DamageStrategy> BowStrategy::clone() const {
+    return make_unique<BowStrategy>();
+}

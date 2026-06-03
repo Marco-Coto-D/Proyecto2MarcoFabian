@@ -24,13 +24,14 @@ private:
     public:
     Knight(string name, string description, int health, int maxHealth, int gold, unique_ptr<Weapon> equippedWeapon, unique_ptr<Armor> equippedArmor);
     void sortWeapon();
-    void addWeapon(unique_ptr<Weapon> other);
+    void addWeapon(Weapon* other);
     string describe() const override;
     int getHealth() const;
     int getMaxHealth() const;
     int getGold() const;
     const Weapon& getEquippedWeapon() const;
     const Armor& getEquippedArmor() const;
+    void spendGold(int gold);
 };
 
 
