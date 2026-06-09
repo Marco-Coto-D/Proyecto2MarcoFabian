@@ -14,6 +14,7 @@ class World {
     unique_ptr<Knight> knight;
     string currentRoomId;
     public:
+    void setStartRoom(string id);
     void addRoom(unique_ptr<Room> room);
     void setKnight(unique_ptr<Knight> knight);
     Room* getRoomById(string id);

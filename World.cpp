@@ -3,6 +3,11 @@
 //
 
 #include "World.h"
+
+void World::setStartRoom(string id) {
+    currentRoomId = id;
+}
+
 void World::addRoom(unique_ptr<Room> room) {
     rooms.push_back(move(room));
 }
@@ -17,7 +22,7 @@ Room * World::getRoomById(string id) {
             return rooms[i].get();
         }
     }
-    return nullptr;
+    throw runtime_error("Sala no encontrada: " + id);
 }
 
 Room* World::getCurrentRoom() {

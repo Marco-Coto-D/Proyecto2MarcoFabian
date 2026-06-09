@@ -27,6 +27,10 @@ void Villager::addWeapon(Weapon *other, int price) {
 }
 
 Weapon * Villager::giveLoot() {
+    if (stock.size() < 3) {
+        throw runtime_error("El aldeano no tiene suficientes armas en stock");
+    }
+
     int probLoot = rand() % 100;
     int calLoot = rand() % 100;
     if (probLoot < 50) {

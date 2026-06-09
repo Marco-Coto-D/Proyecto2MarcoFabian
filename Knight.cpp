@@ -14,6 +14,14 @@ Knight::Knight(string name, string description, int health, int maxHealth, int g
 }
 
 void Knight::sortWeapon() {
+    if (equippedWeapon != nullptr) {
+        inventory.push_back(move(equippedWeapon));
+    }
+
+    if (inventory.empty()) {
+        return;
+    }
+    
     for (int i = 0; i < inventory.size(); i++) {
         for (int j = 0; j < inventory.size() - i - 1; j++) {
             if (*inventory[j] < *inventory[j + 1]) {
