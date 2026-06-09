@@ -12,13 +12,13 @@
 
 class Villager : public Entity {
     private:
-    vector<Weapon*> stock;
+    vector<unique_ptr<Weapon>> stock;
     vector<int> prices;
     public:
     Villager(string name, string description);
     void sortStock();
-    void addWeapon(Weapon* other, int price);
-    Weapon* giveLoot();
+    void addWeapon(unique_ptr<Weapon> other, int price);
+    unique_ptr<Weapon> giveLoot();
     void getAvailableWeapons() const;
     bool sellWeapon(int index, Knight& buyer);
     string describe() const override;
