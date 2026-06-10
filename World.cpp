@@ -33,6 +33,10 @@ Knight & World::getKnight() {
     return *knight;
 }
 
+const vector<unique_ptr<Room>>& World::getRooms() const {
+    return rooms;
+}
+
 void World::moveKnight(string targetRoomID) {
     Room* current = getCurrentRoom();
     const vector<string>& connections = current->getConnections();

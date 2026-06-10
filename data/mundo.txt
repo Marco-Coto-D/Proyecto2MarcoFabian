@@ -1,0 +1,4 @@
+aldea_gris|aldea|Un pueblo gris envuelto en niebla perpetua, con casas de piedra desgastadas y habitantes resignados.|bosque_norte
+bosque_norte|bosque|Un bosque sombrio donde los arboles retorcidos susurran secretos oscuros y el suelo cruje bajo los pies.|aldea_gris,castillo_carmesi,cueva_dragon
+castillo_carmesi|castillo|Un castillo de piedra carmesi cuyas torres se pierden en la niebla y de cuyas ventanas emana una luz maligna.|bosque_norte
+cueva_dragon|cuevas|Una cueva humeda que huele a azufre y muerte, iluminada por la lava que brota entre las grietas del suelo.|bosque_norte

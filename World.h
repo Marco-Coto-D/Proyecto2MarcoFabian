@@ -20,7 +20,9 @@ class World {
     Room* getRoomById(string id);
     Room* getCurrentRoom();
     Knight& getKnight();
+    const vector<unique_ptr<Room>>& getRooms() const;
     void moveKnight(string targetRoomID);
+    // TODO (SimulationEngine): void removeEntityFromCurrentRoom(int index);
 
 };
 

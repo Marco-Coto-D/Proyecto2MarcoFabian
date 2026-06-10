@@ -32,4 +32,6 @@ add_executable(Proyecto2MarcoFabian main.cpp
         Logger.cpp
         Logger.h
         ReportGenerator.cpp
-        ReportGenerator.h)
+        ReportGenerator.h
+        WorldLoader.cpp
+        WorldLoader.h)
