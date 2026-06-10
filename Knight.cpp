@@ -74,6 +74,28 @@ void Knight::spendGold(int gold) {
     this->gold = this->gold - gold;
 }
 
+void Knight::gainGold(int amount) {
+    this->gold += amount;
+}
+
+void Knight::addGold(int amount) {
+    this->gold += amount;
+}
+
+void Knight::takeDamage(int amount) {
+    health -= amount;
+    if (health < 0) health = 0;
+}
+
+void Knight::heal(int amount) {
+    health += amount;
+    if (health > maxHealth) health = maxHealth;
+}
+
+bool Knight::isDead() const {
+    return health <= 0;
+}
+
 void Knight::addBandage() {
     this->bandages = bandages + 1;
 }

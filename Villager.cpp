@@ -84,3 +84,7 @@ bool Villager::sellWeapon(int index, Knight &buyer) {
 string Villager::describe() const {
     return description;
 }
+
+int Villager::getStockSize() const {
+    return (int)stock.size();
+}

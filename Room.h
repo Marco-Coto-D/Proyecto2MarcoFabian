@@ -28,6 +28,7 @@ class Room {
     string getType() const;
     const vector<unique_ptr<Entity>>& getEntities() const;
     const vector<string>& getConnections() const;
+    void removeEntity(Entity* ptr);
 };
 
 

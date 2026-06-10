@@ -22,6 +22,10 @@ private:
     bool operator<(const Weapon& other) const;
     string getName() const;
     int getBaseDamage() const;
+    string getStrategyType() const;  // returns "sword", "bow", or "spell"
+    bool canCast() const;
+    void regenerateMana() const;
+    void consumeMana(int amount) const;
 
 };
 

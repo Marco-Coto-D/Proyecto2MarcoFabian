@@ -34,4 +34,6 @@ add_executable(Proyecto2MarcoFabian main.cpp
         ReportGenerator.cpp
         ReportGenerator.h
         WorldLoader.cpp
-        WorldLoader.h)
+        WorldLoader.h
+        SimulationEngine.cpp
+        SimulationEngine.h)

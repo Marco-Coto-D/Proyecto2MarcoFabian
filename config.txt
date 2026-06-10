@@ -1,10 +1,9 @@
-semilla=42
 sala_inicial=aldea_gris
 caballero_nombre=Sir Aldric
-caballero_descripcion=Un caballero de armadura desgastada y espíritu inquebrantable
+caballero_descripcion=Un caballero de armadura desgastada y espiritu inquebrantable
 caballero_vida=100
 caballero_vida_max=100
-caballero_oro=50
+caballero_oro=10
 caballero_vendajes=2
-precio_vendaje=15
+precio_vendaje=5
 dano_vendaje=25

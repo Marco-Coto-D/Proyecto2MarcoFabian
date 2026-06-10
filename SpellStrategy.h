@@ -9,13 +9,16 @@
 
 class SpellStrategy : public DamageStrategy {
     private:
-    int mana;
+    mutable int mana; // mutable so mana can be managed via const references
     int maxMana;
     public:
     SpellStrategy(int maxMana);
     bool canCast() const;
     double calculateDamage(int baseDamage) const override;
     unique_ptr<DamageStrategy> clone() const override;
+    void regenerate() const;        // restores 25% of maxMana
+    void consumeMana(int amount) const;
+    int getMaxMana() const;
 };
 
 

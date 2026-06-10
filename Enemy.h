@@ -27,8 +27,8 @@ class Enemy : public Entity {
     bool getIsUnique() const;
     const Weapon& getEquippedWeapon() const;
     const Armor& getEquippedArmor() const;
-    // TODO (SimulationEngine): void takeDamage(int amount);
-    // TODO (SimulationEngine): bool isDead() const;
+    void takeDamage(int amount);
+    bool isDead() const;
 };
 
 

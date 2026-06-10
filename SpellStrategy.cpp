@@ -20,3 +20,17 @@ double SpellStrategy::calculateDamage(int baseDamage) const {
 unique_ptr<DamageStrategy> SpellStrategy::clone() const {
     return make_unique<SpellStrategy>(maxMana);
 }
+
+void SpellStrategy::regenerate() const {
+    mana += maxMana / 4;
+    if (mana > maxMana) mana = maxMana;
+}
+
+void SpellStrategy::consumeMana(int amount) const {
+    mana -= amount;
+    if (mana < 0) mana = 0;
+}
+
+int SpellStrategy::getMaxMana() const {
+    return maxMana;
+}

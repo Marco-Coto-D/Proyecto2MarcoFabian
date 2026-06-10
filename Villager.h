@@ -24,6 +24,7 @@ class Villager : public Entity {
     string getId() const;
     bool sellWeapon(int index, Knight& buyer);
     string describe() const override;
+    int getStockSize() const;
 };
 
 

@@ -36,3 +36,12 @@ const vector<unique_ptr<Entity>> & Room::getEntities() const {
 const vector<string> & Room::getConnections() const {
     return connections;
 }
+
+void Room::removeEntity(Entity* ptr) {
+    for (int i = 0; i < (int)entities.size(); i++) {
+        if (entities[i].get() == ptr) {
+            entities.erase(entities.begin() + i);
+            return;
+        }
+    }
+}

@@ -3,6 +3,8 @@
 //
 
 #include "Weapon.h"
+#include "SpellStrategy.h"
+#include "BowStrategy.h"
 
 Weapon::Weapon(string name, int baseDamage, unique_ptr<DamageStrategy> damageStrategy) {
     this->name = name;
@@ -30,4 +32,26 @@ string Weapon::getName() const {
 
 int Weapon::getBaseDamage() const {
     return baseDamage;
+}
+
+string Weapon::getStrategyType() const {
+    if (dynamic_cast<const SpellStrategy*>(damageStrategy.get())) return "spell";
+    if (dynamic_cast<const BowStrategy*>(damageStrategy.get()))   return "bow";
+    return "sword";
+}
+
+bool Weapon::canCast() const {
+    const SpellStrategy* ss = dynamic_cast<const SpellStrategy*>(damageStrategy.get());
+    if (ss == nullptr) return true;
+    return ss->canCast();
+}
+
+void Weapon::regenerateMana() const {
+    const SpellStrategy* ss = dynamic_cast<const SpellStrategy*>(damageStrategy.get());
+    if (ss != nullptr) ss->regenerate();
+}
+
+void Weapon::consumeMana(int amount) const {
+    const SpellStrategy* ss = dynamic_cast<const SpellStrategy*>(damageStrategy.get());
+    if (ss != nullptr) ss->consumeMana(amount);
 }

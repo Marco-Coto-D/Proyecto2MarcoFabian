@@ -14,12 +14,14 @@ unique_ptr<DamageStrategy> WorldLoader::makeStrategy(const string& type, int max
 void WorldLoader::loadConfig(const string& path, World& world) {
     ifstream file(path);
     if (!file.is_open()) {
+        file.open("../" + path);
+    }
+    if (!file.is_open()) {
         throw runtime_error("No se pudo abrir el archivo de configuracion: " + path);
     }
 
     string knightName, knightDesc;
     int knightHealth = 0, knightMaxHealth = 0, knightGold = 0, knightBandages = 0;
-    seed = 0;
     bandagePrice = 0;
     bandageHeal = 0;
 
@@ -33,9 +35,7 @@ void WorldLoader::loadConfig(const string& path, World& world) {
         getline(ss, key, '=');
         getline(ss, value);
 
-        if (key == "semilla") {
-            seed = stoi(value);
-        } else if (key == "sala_inicial") {
+        if (key == "sala_inicial") {
             startRoomId = value;
         } else if (key == "caballero_nombre") {
             knightName = value;
@@ -63,13 +63,16 @@ void WorldLoader::loadConfig(const string& path, World& world) {
         throw runtime_error("Error en " + path + ": falta la clave 'sala_inicial'");
     }
 
-    auto fists = make_unique<Weapon>("Puños", 1, make_unique<SwordStrategy>());
+    auto fists = make_unique<Weapon>("Punios", 2, make_unique<SwordStrategy>());
     auto noArmor = make_unique<Armor>("Sin Armadura", 0);
     world.setKnight(make_unique<Knight>(knightName, knightDesc, knightHealth, knightMaxHealth, knightGold, move(fists), move(noArmor), knightBandages));
 }
 
 void WorldLoader::loadWorld(const string& path, World& world) {
     ifstream file(path);
+    if (!file.is_open()) {
+        file.open("../" + path);
+    }
     if (!file.is_open()) {
         throw runtime_error("No se pudo abrir el archivo de mundo: " + path);
     }
@@ -107,6 +110,9 @@ void WorldLoader::loadWorld(const string& path, World& world) {
 
 void WorldLoader::loadEntities(const string& path, World& world) {
     ifstream file(path);
+    if (!file.is_open()) {
+        file.open("../" + path);
+    }
     if (!file.is_open()) {
         throw runtime_error("No se pudo abrir el archivo de entidades: " + path);
     }
@@ -197,6 +203,9 @@ void WorldLoader::loadEntities(const string& path, World& world) {
 void WorldLoader::loadVillagerStock(const string& path, World& world) {
     ifstream file(path);
     if (!file.is_open()) {
+        file.open("../" + path);
+    }
+    if (!file.is_open()) {
         throw runtime_error("No se pudo abrir el archivo de armas de aldeanos: " + path);
     }
 
@@ -258,7 +267,7 @@ World WorldLoader::load(
     } catch (const runtime_error&) {
         throw runtime_error("La sala_inicial '" + startRoomId + "' no existe en mundo.txt");
     }
-    
+
     const vector<unique_ptr<Room>>& rooms = world.getRooms();
     for (int i = 0; i < (int)rooms.size(); i++) {
         const vector<string>& conns = rooms[i]->getConnections();
@@ -284,6 +293,10 @@ World WorldLoader::load(
     return world;
 }
 
-int WorldLoader::getSeed() const {
-    return seed;
+int WorldLoader::getBandagePrice() const {
+    return bandagePrice;
+}
+
+int WorldLoader::getBandageHeal() const {
+    return bandageHeal;
 }

@@ -36,3 +36,12 @@ const Weapon & Enemy::getEquippedWeapon() const {
 const Armor & Enemy::getEquippedArmor() const {
     return *equippedArmor;
 }
+
+void Enemy::takeDamage(int amount) {
+    health -= amount;
+    if (health < 0) health = 0;
+}
+
+bool Enemy::isDead() const {
+    return health <= 0;
+}

@@ -29,12 +29,10 @@ public:
         const string& entitiesPath,
         const string& villagerStockPath
     );
-    int getSeed() const;
-    // TODO (SimulationEngine): int getBandagePrice() const;
-    // TODO (SimulationEngine): int getBandageHeal() const;
+    int getBandagePrice() const;
+    int getBandageHeal() const;
 
 private:
-    int seed;
     int bandagePrice;
     int bandageHeal;
     string startRoomId;
