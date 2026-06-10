@@ -35,9 +35,9 @@ private:
     const Armor& getEquippedArmor() const;
     const vector<unique_ptr<Weapon>>& getInventory() const;
     void spendGold(int gold);
-    void gainGold(int amount);
     void addGold(int amount);
     void addBandage();
+    void printInventory() const;
     void useBandage(int healthamount);
     void setArmor(unique_ptr<Armor> newArmor);
     void takeDamage(int amount);

@@ -9,6 +9,9 @@
 class Dragon : public Enemy {
     public:
     Dragon(string name, string description, int health, int maxHealth, unique_ptr<Weapon> equippedWeapon, unique_ptr<Armor> equippedArmor, bool isUnique): Enemy(name, description, health, maxHealth, move(equippedWeapon), move(equippedArmor), isUnique) {};
+    bool isVictoryKill() const override {
+        return true;
+    }
 };
 
 #endif //PROYECTO2MARCOFABIAN_DRAGON_H

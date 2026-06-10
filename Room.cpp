@@ -45,3 +45,11 @@ void Room::removeEntity(Entity* ptr) {
         }
     }
 }
+
+string Room::getAmbientLine() const {
+    if (type == "aldea")    return "Los aldeanos susurran historias de tiempos mas oscuros.";
+    if (type == "bosque")   return "El viento entre los arboles suena como lamentos olvidados.";
+    if (type == "castillo") return "Sombras se mueven en las paredes del castillo. Algo acecha.";
+    if (type == "cuevas")   return "El goteo del agua resuena en la oscuridad. Algo respira cerca.";
+    return "Un momento de silencio inquietante.";
+}

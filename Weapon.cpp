@@ -55,3 +55,10 @@ void Weapon::consumeMana(int amount) const {
     const SpellStrategy* ss = dynamic_cast<const SpellStrategy*>(damageStrategy.get());
     if (ss != nullptr) ss->consumeMana(amount);
 }
+
+int Weapon::getHitChance() const {
+    string type = getStrategyType();
+    if (type == "bow")   return 65;
+    if (type == "spell") return 85;
+    return 80;
+}

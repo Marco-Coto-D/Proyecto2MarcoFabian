@@ -29,6 +29,9 @@ class Enemy : public Entity {
     const Armor& getEquippedArmor() const;
     void takeDamage(int amount);
     bool isDead() const;
+    virtual int getGoldDrop() const;
+    virtual bool isFriendly() const;
+    virtual bool isVictoryKill() const;
 };
 
 

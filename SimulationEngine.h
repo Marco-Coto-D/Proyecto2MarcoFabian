@@ -11,8 +11,6 @@ using namespace std;
 #include "World.h"
 #include "Logger.h"
 #include "ReportGenerator.h"
-#include "Goblin.h"
-#include "Dragon.h"
 #include "Mage.h"
 #include "Villager.h"
 
@@ -34,7 +32,6 @@ private:
     bool gameOver;
     bool victory;
     string previousRoomId;
-
     void runRoom(Room* room);
     Entity* rollEncounter(Room* room);
     void runCombat(Enemy* enemy, Room* room);
@@ -43,9 +40,6 @@ private:
     bool handleMainMenu(Room* room, Villager* villager, bool isDungeon, bool canExplore);
     void handleMove(Room* room);
     void handleVillagerInteraction(Villager* villager);
-    void handleInventory();
-    int getHitChance(const Weapon& w) const;
-    string getNarrativeLine(const string& roomType) const;
     void waitForEnter();
 };
 

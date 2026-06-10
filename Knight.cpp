@@ -74,10 +74,6 @@ void Knight::spendGold(int gold) {
     this->gold = this->gold - gold;
 }
 
-void Knight::gainGold(int amount) {
-    this->gold += amount;
-}
-
 void Knight::addGold(int amount) {
     this->gold += amount;
 }
@@ -102,6 +98,25 @@ bool Knight::isDead() const {
 
 void Knight::addBandage() {
     this->bandages = bandages + 1;
+}
+
+void Knight::printInventory() const {
+    cout << "\n=== Inventario de " << name << " ===" << endl;
+    cout << "Vida: " << health << " / " << maxHealth << endl;
+    cout << "Oro: " << gold << endl;
+    cout << "Vendajes: " << bandages << endl;
+    cout << "Equipado: " << equippedWeapon->getName() << " (base: " << equippedWeapon->getBaseDamage() << ", tipo: " << equippedWeapon->getStrategyType() << ")" << endl;
+    cout << "Armadura: " << equippedArmor->getName() << " (reduccion: " << equippedArmor->getDamageReduction() << "%)" << endl;
+    cout << "Bolsa:";
+    if (inventory.empty()) {
+        cout << " (vacia)" << endl;
+    } else {
+        cout << endl;
+        for (int i = 0; i < (int)inventory.size(); i++) {
+            cout << "  " << (i + 1) << ". " << inventory[i]->getName()
+                 << " (base: " << inventory[i]->getBaseDamage() << ")" << endl;
+        }
+    }
 }
 
 void Knight::useBandage(int healthamount) {

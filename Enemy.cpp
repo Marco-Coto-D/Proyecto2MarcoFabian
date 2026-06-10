@@ -45,3 +45,15 @@ void Enemy::takeDamage(int amount) {
 bool Enemy::isDead() const {
     return health <= 0;
 }
+
+int Enemy::getGoldDrop() const {
+    return 0;
+}
+
+bool Enemy::isFriendly() const {
+    return false;
+}
+
+bool Enemy::isVictoryKill() const {
+    return false;
+}

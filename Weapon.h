@@ -26,6 +26,7 @@ private:
     bool canCast() const;
     void regenerateMana() const;
     void consumeMana(int amount) const;
+    int getHitChance() const;
 
 };
 
