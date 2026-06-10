@@ -88,3 +88,37 @@ string Villager::describe() const {
 int Villager::getStockSize() const {
     return (int)stock.size();
 }
+
+void Villager::addArmor(unique_ptr<Armor> armor, int price) {
+    armorStock.push_back(move(armor));
+    armorPrices.push_back(price);
+}
+
+int Villager::getArmorStockSize() const {
+    return (int)armorStock.size();
+}
+
+void Villager::getAvailableArmors() const {
+    cout << "----Armaduras disponibles----" << endl << endl;
+    for (int i = 0; i < (int)armorStock.size(); i++) {
+        cout << "Indice: " << i << endl;
+        cout << "Nombre: " << armorStock[i]->getName() << endl;
+        cout << "Reduccion de danio: " << armorStock[i]->getDamageReduction() << "%" << endl;
+        cout << "Precio: " << armorPrices[i] << endl << endl;
+    }
+}
+
+bool Villager::sellArmor(int index, Knight& buyer) {
+    if (buyer.getGold() < armorPrices[index]) {
+        cout << "No tienes oro suficiente (necesitas " << armorPrices[index]
+             << ", tienes " << buyer.getGold() << ")." << endl;
+        return false;
+    }
+    if (armorStock[index]->getDamageReduction() <= buyer.getEquippedArmor().getDamageReduction()) {
+        cout << "Esta armadura no es mejor que la que ya llevas puesta." << endl;
+        return false;
+    }
+    buyer.spendGold(armorPrices[index]);
+    buyer.setArmor(make_unique<Armor>(*armorStock[index]));
+    return true;
+}

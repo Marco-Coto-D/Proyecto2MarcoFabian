@@ -82,6 +82,10 @@ void Knight::addGold(int amount) {
     this->gold += amount;
 }
 
+void Knight::setArmor(unique_ptr<Armor> newArmor) {
+    equippedArmor = move(newArmor);
+}
+
 void Knight::takeDamage(int amount) {
     health -= amount;
     if (health < 0) health = 0;

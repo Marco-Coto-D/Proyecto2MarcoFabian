@@ -63,7 +63,7 @@ void WorldLoader::loadConfig(const string& path, World& world) {
         throw runtime_error("Error en " + path + ": falta la clave 'sala_inicial'");
     }
 
-    auto fists = make_unique<Weapon>("Punios", 2, make_unique<SwordStrategy>());
+    auto fists = make_unique<Weapon>("Punios", 3, make_unique<SwordStrategy>());
     auto noArmor = make_unique<Armor>("Sin Armadura", 0);
     world.setKnight(make_unique<Knight>(knightName, knightDesc, knightHealth, knightMaxHealth, knightGold, move(fists), move(noArmor), knightBandages));
 }
@@ -253,7 +253,8 @@ World WorldLoader::load(
     const string& configPath,
     const string& worldPath,
     const string& entitiesPath,
-    const string& villagerStockPath
+    const string& villagerStockPath,
+    const string& armorStockPath
 ) {
     World world;
     villagerIds.clear();
@@ -288,9 +289,57 @@ World WorldLoader::load(
 
     loadEntities(entitiesPath, world);
     loadVillagerStock(villagerStockPath, world);
+    loadArmorStock(armorStockPath, world);
 
     world.setStartRoom(startRoomId);
     return world;
+}
+
+void WorldLoader::loadArmorStock(const string& path, World& world) {
+    ifstream file(path);
+    if (!file.is_open()) {
+        file.open("../" + path);
+    }
+    if (!file.is_open()) {
+        throw runtime_error("No se pudo abrir el archivo de armaduras de aldeanos: " + path);
+    }
+
+    string line;
+    int lineNum = 0;
+    while (getline(file, line)) {
+        lineNum++;
+        if (line.empty()) continue;
+
+        vector<string> f;
+        stringstream ss(line);
+        string token;
+        while (getline(ss, token, '|')) {
+            f.push_back(token);
+        }
+        if ((int)f.size() < 4) {
+            throw runtime_error("Error en " + path + " linea " + to_string(lineNum) + ": se requieren 4 campos (id_aldeano|nombre|reduccion|precio)");
+        }
+
+        string aldId    = f[0];
+        string armName  = f[1];
+        int reduction   = stoi(f[2]);
+        int price       = stoi(f[3]);
+
+        Villager* villager = nullptr;
+        for (int i = 0; i < (int)villagerIds.size(); i++) {
+            if (villagerIds[i] == aldId) {
+                villager = villagerPtrs[i];
+                break;
+            }
+        }
+        if (villager == nullptr) {
+            throw runtime_error("Error en " + path + " linea " + to_string(lineNum) +
+                ": aldeano '" + aldId + "' no encontrado (no fue definido en entidades.txt)");
+        }
+
+        auto armor = make_unique<Armor>(armName, reduction);
+        villager->addArmor(move(armor), price);
+    }
 }
 
 int WorldLoader::getBandagePrice() const {

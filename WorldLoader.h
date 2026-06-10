@@ -27,7 +27,8 @@ public:
         const string& configPath,
         const string& worldPath,
         const string& entitiesPath,
-        const string& villagerStockPath
+        const string& villagerStockPath,
+        const string& armorStockPath
     );
     int getBandagePrice() const;
     int getBandageHeal() const;
@@ -43,6 +44,7 @@ private:
     void loadWorld(const string& path, World& world);
     void loadEntities(const string& path, World& world);
     void loadVillagerStock(const string& path, World& world);
+    void loadArmorStock(const string& path, World& world);
     unique_ptr<DamageStrategy> makeStrategy(const string& type, int maxMana, int lineNum, const string& file);
 };
 

@@ -396,6 +396,7 @@ void SimulationEngine::handleVillagerInteraction(Villager* villager) {
     if (resp == 1) {
         cout << "1. Comprar arma" << endl;
         cout << "2. Comprar vendaje (" << bandagePrice << " de oro)" << endl;
+        cout << "3. Comprar armadura" << endl;
         cout << "0. Salir" << endl;
         cout << "Opcion: ";
         int shopChoice;
@@ -425,6 +426,23 @@ void SimulationEngine::handleVillagerInteraction(Villager* villager) {
             } else {
                 cout << "No tienes suficiente oro (necesitas " << bandagePrice
                      << ", tienes " << knight.getGold() << ")." << endl;
+            }
+        } else if (shopChoice == 3) {
+            if (villager->getArmorStockSize() == 0) {
+                cout << "Este aldeano no vende armaduras." << endl;
+            } else {
+                villager->getAvailableArmors();
+                int maxIdx = villager->getArmorStockSize() - 1;
+                cout << "Indices disponibles: 0 a " << maxIdx << endl;
+                cout << "Indice de la armadura (o -1 para cancelar): ";
+                int idx;
+                if (!(cin >> idx)) { cin.clear(); cin.ignore(1000, '\n'); idx = -1; }
+                else cin.ignore(1000, '\n');
+                if (idx >= 0 && idx <= maxIdx) {
+                    if (villager->sellArmor(idx, knight)) {
+                        cout << "Armadura equipada: " << knight.getEquippedArmor().getName() << " (reduccion: " << knight.getEquippedArmor().getDamageReduction() << "%)" << " | Oro restante: " << knight.getGold() << endl;
+                    }
+                }
             }
         }
     }

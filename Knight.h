@@ -39,6 +39,7 @@ private:
     void addGold(int amount);
     void addBandage();
     void useBandage(int healthamount);
+    void setArmor(unique_ptr<Armor> newArmor);
     void takeDamage(int amount);
     void heal(int amount);
     bool isDead() const;

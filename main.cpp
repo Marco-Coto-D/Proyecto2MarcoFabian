@@ -11,7 +11,7 @@ int main() {
     World world;
 
     try {
-        world = loader.load("config.txt", "mundo.txt", "entidades.txt", "armas_aldeanos.txt");
+        world = loader.load("config.txt", "mundo.txt", "entidades.txt", "armas_aldeanos.txt", "armaduras_aldeanos.txt");
     } catch (const runtime_error& e) {
         cerr << "Error al cargar el mundo: " << e.what() << endl;
         return 1;
