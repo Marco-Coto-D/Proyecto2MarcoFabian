@@ -16,13 +16,15 @@ class Enemy : public Entity {
     private:
     int health;
     int maxHealth;
+    bool isUnique;
     unique_ptr<Weapon> equippedWeapon;
     unique_ptr<Armor> equippedArmor;
     public:
-    Enemy(string name, string description, int health, int maxHealth, unique_ptr<Weapon> equippedWeapon, unique_ptr<Armor> equippedArmor);
+    Enemy(string name, string description, int health, int maxHealth, unique_ptr<Weapon> equippedWeapon, unique_ptr<Armor> equippedArmor, bool isUnique);
     string describe() const override;
     int getHealth() const;
     int getMaxHealth() const;
+    bool getIsUnique() const;
     const Weapon& getEquippedWeapon() const;
     const Armor& getEquippedArmor() const;
 };

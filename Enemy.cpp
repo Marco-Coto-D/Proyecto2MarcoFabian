@@ -5,11 +5,12 @@
 #include "Enemy.h"
 
 Enemy::Enemy(string name, string description, int health, int maxHealth, unique_ptr<Weapon> equippedWeapon,
-    unique_ptr<Armor> equippedArmor) : Entity(name, description) {
+    unique_ptr<Armor> equippedArmor, bool isUnique) : Entity(name, description) {
     this->health = health;
     this->maxHealth = maxHealth;
     this->equippedWeapon = move(equippedWeapon);
     this->equippedArmor = move(equippedArmor);
+    this->isUnique = isUnique;
 }
 
 string Enemy::describe() const {
@@ -22,6 +23,10 @@ int Enemy::getHealth() const {
 
 int Enemy::getMaxHealth() const {
     return maxHealth;
+}
+
+bool Enemy::getIsUnique() const {
+    return isUnique;
 }
 
 const Weapon & Enemy::getEquippedWeapon() const {
