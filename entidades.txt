@@ -1,12 +1,24 @@
 VILLAGER|aldeano_01|aldea_gris|Theron el Herrero|Un anciano herrero de manos callosas que forja armas desde hace cuarenta anos
 VILLAGER|aldeano_02|aldea_gris|Lyra la Comerciante|Una comerciante astuta con ojos perspicaces y mercancia de dudosa procedencia
+VILLAGER|aldeano_03|aldea_refugio|Bram el Cazador|Sobrio, conoce el bosque pútrido
+VILLAGER|aldeano_04|aldea_refugio|Vargo el Mercenario|Veterano cínico, vende lo que tiene
 MAGE|aldea_gris|Eryn el Vidente|Un mago errante de tunica desgastada y mirada perdida en otros mundos|30|30|true|Baston de Cristal|8|spell|20|Tunica de Lino|5
+MAGE|aldea_refugio|Eldwin el Sabio|Un mago errante de capa azul cuyas manos resplandecen con luz curativa, ha encontrado refugio entre los sobrevivientes|25|25|true|Baculo del Rocio|6|spell|20|Tunica de Lino|3
 GOBLIN|bosque_norte|Gruk|Un goblin pequeno con dientes afilados y ojos brillantes de malicia|20|20|false|Daga Oxidada|5|sword|0|Harapos de Cuero|2
 GOBLIN|bosque_norte|Skrix|Un goblin corpulento que porta un garrote tallado con huesos de sus victimas|25|25|false|Garrote de Hueso|7|sword|0|Cuero Viejo|2
 GOBLIN|bosque_norte|Vrax|Un goblin agil con un arco hecho de ramas retorcidas del bosque maldito|18|18|false|Arco de Ramas|6|bow|0|Sin Armadura|0
+GOBLIN|bosque_cenizas|Skarn el Carbonizado|Un goblin de piel ennegrecida por el fuego que ataca con un hacha rota|28|28|false|Hacha Rota|6|sword|0|Cuero Quemado|5
+GOBLIN|bosque_cenizas|Vex el Hollin|Un goblin pequenio que se esconde entre las cenizas y embosca con flechas envenenadas|24|24|false|Arco de Ramas|5|bow|0|Harapos|0
+GOBLIN|bosque_cenizas|Drog el Tiznado|Un goblin grunion con el rostro cubierto de cenizas y un palo afilado en cada mano|32|32|false|Palos Afilados|7|sword|0|Cuero Tachonado|10
+GOBLIN|bosque_putrido|Grul el Podrido|Un goblin cuya piel verde gangrenada despide un olor nauseabundo, sostiene una espada oxidada|40|40|false|Espada Oxidada|9|sword|0|Cuero Putrefacto|10
+GOBLIN|bosque_putrido|Kragor el Maldito|Un goblin marcado por la enfermedad cuyos ojos brillan con malicia, dispara dardos infectados|36|36|false|Cerbatana Maligna|8|bow|0|Harapos Manchados|5
+GOBLIN|bosque_putrido|Throx el Brujo Menor|Un goblin que ha aprendido magia rudimentaria de los magos caidos, lanza chispas oscuras|34|34|false|Chispa Oscura|7|spell|25|Tunica Sucia|5
 MAGE|castillo_carmesi|Zoltar el Oscuro|Un mago de tunica negra que lanza maldiciones sin piedad ni remordimiento|45|45|false|Baculo de Sombra|12|spell|30|Manto de Seda Negra|8
 MAGE|castillo_carmesi|Vex la Sombria|Una maga de ojos vacios que murmura hechizos de muerte en lenguas olvidadas|40|40|false|Orbe de Tinieblas|10|spell|25|Velo de las Sombras|6
 MAGE|castillo_carmesi|Lord Malachar|El archimago del castillo rojo, de poder aterrador e inmensa crueldad hacia los vivos|80|80|true|Cetro del Apocalipsis|20|spell|50|Armadura de las Runas|15
+MAGE|castillo_cuervo|Korven el Plumas|Un mago joven con manto de plumas negras que practica magia oscura entre los ecos del castillo|45|45|false|Daga Arcana|9|spell|35|Tunica Negra|10
+MAGE|castillo_cuervo|Nerya la Sombra de Alas|Una hechicera de mirada gelida que ha sido exiliada por sus rituales prohibidos|55|55|false|Baculo de Hueso|11|spell|45|Capa de Cuervos|15
+MAGE|castillo_cuervo|Lord Malthar de los Cuervos|El amo del castillo, un nigromante anciano cuyo manto se mueve como si tuviera vida propia|85|85|true|Cetro del Olvido|15|spell|70|Armadura de Hueso Negro|25
 GOBLIN|cueva_dragon|Grix|Un esbirro goblin del dragon, feroz y eternamente leal a su senor de escamas|22|22|false|Lanza Oxidada|6|sword|0|Cuero Endurecido|3
 GOBLIN|cueva_dragon|Furg|Un goblin guardian de la entrada, armado con huesos afilados de sacrificios anteriores|20|20|false|Hueso Afilado|5|sword|0|Sin Armadura|0
 DRAGON|cueva_dragon|Ignarath el Consumidor|Un dragon antiguo de escamas negras como el carbon y aliento de fuego negro que quema el alma|200|200|true|Garra Ignea|35|sword|0|Escamas de Obsidiana|25

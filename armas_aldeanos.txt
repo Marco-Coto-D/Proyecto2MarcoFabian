@@ -4,3 +4,8 @@ aldeano_01|Lanza de Combate|10|sword|0|20
 aldeano_02|Arco de Caza|8|bow|0|15
 aldeano_02|Arco de Guerra|14|bow|0|35
 aldeano_02|Baston Arcano|9|spell|20|25
+aldeano_03|Arco Corto|6|bow|0|25
+aldeano_03|Arco Compuesto|10|bow|0|55
+aldeano_03|Ballesta Pesada|14|bow|0|110
+aldeano_04|Espada Bastarda|13|sword|0|95
+aldeano_04|Mandoble del Caballero|17|sword|0|180

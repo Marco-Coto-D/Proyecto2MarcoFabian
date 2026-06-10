@@ -1,4 +1,8 @@
 aldea_gris|aldea|Un pueblo gris envuelto en niebla perpetua, con casas de piedra desgastadas y habitantes resignados.|bosque_norte
-bosque_norte|bosque|Un bosque sombrio donde los arboles retorcidos susurran secretos oscuros y el suelo cruje bajo los pies.|aldea_gris,castillo_carmesi,cueva_dragon
+aldea_refugio|aldea|Aldea de sobrevivientes, ultimo refugio antes de las montanias.|bosque_cenizas,bosque_putrido
+bosque_norte|bosque|Un bosque sombrio donde los arboles retorcidos susurran secretos oscuros y el suelo cruje bajo los pies.|aldea_gris,bosque_cenizas,castillo_carmesi
+bosque_cenizas|bosque|Restos de un incendio antiguo, suelo gris.|aldea_refugio,castillo_cuervo,bosque_norte
+bosque_putrido|bosque|Vegetacion enferma, mas densidad de enemigos.|aldea_refugio,cueva_dragon
 castillo_carmesi|castillo|Un castillo de piedra carmesi cuyas torres se pierden en la niebla y de cuyas ventanas emana una luz maligna.|bosque_norte
-cueva_dragon|cuevas|Una cueva humeda que huele a azufre y muerte, iluminada por la lava que brota entre las grietas del suelo.|bosque_norte
+castillo_cuervo|castillo|Banderas rotas, cuervos circundando las torres.|bosque_cenizas
+cueva_dragon|cuevas|Una cueva humeda que huele a azufre y muerte, iluminada por la lava que brota entre las grietas del suelo.|bosque_putrido
