@@ -139,7 +139,6 @@ void SimulationEngine::runCombat(Enemy *enemy, Room *room) {
     cout << enemy->describe() << endl;
     logger.logCombat(enemy->getName());
 
-    bool givesGold = (enemy->getGoldDrop() > 0);
     bool isVictory = enemy->isVictoryKill();
     bool isMageEnemy = (!enemy->isFriendly() && dynamic_cast<Mage *>(enemy) != nullptr);
     bool isUnique = enemy->getIsUnique();
