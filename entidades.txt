@@ -18,7 +18,7 @@ MAGE|castillo_carmesi|Vex la Sombria|Una maga de ojos vacios que murmura hechizo
 MAGE|castillo_carmesi|Lord Malachar|El archimago del castillo rojo, de poder aterrador e inmensa crueldad hacia los vivos|80|80|true|Cetro del Apocalipsis|20|spell|50|Armadura de las Runas|15
 MAGE|castillo_cuervo|Korven el Plumas|Un mago joven con manto de plumas negras que practica magia oscura entre los ecos del castillo|45|45|false|Daga Arcana|9|spell|35|Tunica Negra|10
 MAGE|castillo_cuervo|Nerya la Sombra de Alas|Una hechicera de mirada gelida que ha sido exiliada por sus rituales prohibidos|55|55|false|Baculo de Hueso|11|spell|45|Capa de Cuervos|15
-MAGE|castillo_cuervo|Lord Malthar de los Cuervos|El amo del castillo, un nigromante anciano cuyo manto se mueve como si tuviera vida propia|85|85|true|Cetro del Olvido|15|spell|70|Armadura de Hueso Negro|25
+MAGE|castillo_cuervo|Lord Malthar de los Cuervos|El amo del castillo, un nigromante anciano cuyo manto se mueve como si tuviera vida propia|85|85|true|Cetro de la Olvidada|15|spell|70|Armadura de Hueso Negro|25
 GOBLIN|cueva_dragon|Grix|Un esbirro goblin del dragon, feroz y eternamente leal a su senor de escamas|22|22|false|Lanza Oxidada|6|sword|0|Cuero Endurecido|3
 GOBLIN|cueva_dragon|Furg|Un goblin guardian de la entrada, armado con huesos afilados de sacrificios anteriores|20|20|false|Hueso Afilado|5|sword|0|Sin Armadura|0
 DRAGON|cueva_dragon|Ignarath el Consumidor|Un dragon antiguo de escamas negras como el carbon y aliento de fuego negro que quema el alma|200|200|true|Garra Ignea|35|sword|0|Escamas de Obsidiana|25

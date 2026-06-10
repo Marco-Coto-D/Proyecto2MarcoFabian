@@ -5,4 +5,4 @@ bosque_cenizas|bosque|Restos de un incendio antiguo, suelo gris.|aldea_refugio,c
 bosque_putrido|bosque|Vegetacion enferma, mas densidad de enemigos.|aldea_refugio,cueva_dragon
 castillo_carmesi|castillo|Un castillo de piedra carmesi cuyas torres se pierden en la niebla y de cuyas ventanas emana una luz maligna.|bosque_norte
 castillo_cuervo|castillo|Banderas rotas, cuervos circundando las torres.|bosque_cenizas
-cueva_dragon|cuevas|Una cueva humeda que huele a azufre y muerte, iluminada por la lava que brota entre las grietas del suelo.|bosque_putrido
+cueva_dragon|cuevas|Una cueva humeda que huele a azufre y muerte iluminada por la lava que brota entre las grietas del suelo.|bosque_putrido
