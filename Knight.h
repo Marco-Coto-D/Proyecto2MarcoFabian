@@ -18,20 +18,24 @@ private:
     int health;
     int maxHealth;
     int gold;
+    int bandages;
     unique_ptr<Weapon> equippedWeapon;
     unique_ptr<Armor> equippedArmor;
     vector<unique_ptr<Weapon>> inventory;
     public:
-    Knight(string name, string description, int health, int maxHealth, int gold, unique_ptr<Weapon> equippedWeapon, unique_ptr<Armor> equippedArmor);
+    Knight(string name, string description, int health, int maxHealth, int gold, unique_ptr<Weapon> equippedWeapon, unique_ptr<Armor> equippedArmor, int bandages);
     void sortWeapon();
     void addWeapon(Weapon* other);
     string describe() const override;
     int getHealth() const;
     int getMaxHealth() const;
     int getGold() const;
+    int getBandages() const;
     const Weapon& getEquippedWeapon() const;
     const Armor& getEquippedArmor() const;
     void spendGold(int gold);
+    void addBandage();
+    void useBandage(int healthamount);
 };
 
 
