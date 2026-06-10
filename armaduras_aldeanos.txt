@@ -1,0 +1,4 @@
+aldeano_01|Armadura de Cuero|10|40
+aldeano_01|Armadura de Placas|20|80
+aldeano_02|Armadura de Hierro|30|150
+aldeano_02|Armadura de Acero|40|250
