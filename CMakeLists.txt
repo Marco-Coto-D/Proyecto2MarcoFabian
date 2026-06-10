@@ -28,4 +28,8 @@ add_executable(Proyecto2MarcoFabian main.cpp
         Room.cpp
         Room.h
         World.cpp
-        World.h)
+        World.h
+        Logger.cpp
+        Logger.h
+        ReportGenerator.cpp
+        ReportGenerator.h)

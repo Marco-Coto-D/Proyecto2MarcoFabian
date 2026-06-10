@@ -66,6 +66,10 @@ const Armor & Knight::getEquippedArmor() const {
     return *equippedArmor;
 }
 
+const vector<unique_ptr<Weapon>>& Knight::getInventory() const {
+    return inventory;
+}
+
 void Knight::spendGold(int gold) {
     this->gold = this->gold - gold;
 }

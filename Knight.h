@@ -33,9 +33,13 @@ private:
     int getBandages() const;
     const Weapon& getEquippedWeapon() const;
     const Armor& getEquippedArmor() const;
+    const vector<unique_ptr<Weapon>>& getInventory() const;
     void spendGold(int gold);
     void addBandage();
     void useBandage(int healthamount);
+    // TODO (SimulationEngine): void takeDamage(int amount);
+    // TODO (SimulationEngine): bool isDead() const;
+    // TODO (SimulationEngine): void gainGold(int amount);
 };
 
 

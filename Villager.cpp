@@ -6,7 +6,8 @@
 #include <cstdlib>
 #include <ctime>
 
-Villager::Villager(string name, string description): Entity(name, description) {
+Villager::Villager(string id, string name, string description): Entity(name, description) {
+    this->id = id;
 }
 
 void Villager::sortStock() {
@@ -62,6 +63,10 @@ void Villager::getAvailableWeapons() const {
         cout <<"Fuerza Base: "<<stock[i]->getBaseDamage()<<endl;
         cout<<"Precio:" <<prices[i] <<endl;
     }
+}
+
+string Villager::getId() const {
+    return id;
 }
 
 bool Villager::sellWeapon(int index, Knight &buyer) {
