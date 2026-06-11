@@ -1,0 +1,52 @@
+=== RESULTADO: DERROTA ===
+Las tinieblas han consumido al caballero Sir Aldric. El reino cae en la desesperanza eterna.
+
+=== ESTADO FINAL DEL CABALLERO ===
+Nombre: Sir Aldric
+Vida: 0 / 100
+Oro: 125
+Vendajes: 4
+
+Arma equipada: Baston Arcano (dano base: 10)
+Armadura equipada: Armadura de Cuero (reduccion: 10)
+
+Inventario de armas:
+  - Baston Arcano (dano base: 10)
+
+  - Arco Compuesto (dano base: 10)
+
+  - Espada de Madera (dano base: 8)
+
+  - Arco Corto (dano base: 6)
+
+  - Arco Corto (dano base: 6)
+
+  - Punios (dano base: 4)
+
+=== ESTADiSTICAS ===
+Goblins derrotados: 9
+Magos derrotados: 0
+Dragones derrotados: 0
+Total de turnos jugados: 68
+
+Salas visitadas (en orden cronologico):
+  - aldea_gris
+  - bosque_norte
+  - aldea_gris
+  - bosque_norte
+  - bosque_cenizas
+  - aldea_refugio
+  - bosque_cenizas
+  - aldea_refugio
+  - bosque_cenizas
+  - aldea_refugio
+  - bosque_cenizas
+  - aldea_refugio
+  - bosque_putrido
+  - aldea_refugio
+  - bosque_cenizas
+  - aldea_refugio
+  - bosque_cenizas
+  - aldea_refugio
+  - bosque_putrido
+  - cueva_dragon
