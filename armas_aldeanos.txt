@@ -1,9 +1,9 @@
-aldeano_01|Espada de Madera|5|sword|0|10
-aldeano_01|Espada de Hierro|12|sword|0|30
-aldeano_01|Lanza de Combate|10|sword|0|20
+aldeano_01|Espada de Madera|8|sword|0|10
+aldeano_01|Espada de Hierro|15|sword|0|30
+aldeano_01|Lanza de Combate|12|sword|0|20
 aldeano_02|Arco de Caza|8|bow|0|15
 aldeano_02|Arco de Guerra|14|bow|0|35
-aldeano_02|Baston Arcano|9|spell|20|25
+aldeano_02|Baston Arcano|10|spell|20|25
 aldeano_03|Arco Corto|6|bow|0|25
 aldeano_03|Arco Compuesto|10|bow|0|55
 aldeano_03|Ballesta Pesada|14|bow|0|110

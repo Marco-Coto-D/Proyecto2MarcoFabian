@@ -18,7 +18,7 @@ Logger::~Logger() {
 }
 
 void Logger::logRoomEntry(const string& roomName) {
-    logFile << "Entró a " << roomName<<endl;
+    logFile << "Entro a " << roomName<<endl;
 }
 
 void Logger::logInteraction(const string& description) {
@@ -26,7 +26,7 @@ void Logger::logInteraction(const string& description) {
 }
 
 void Logger::logCombat(const string& enemyName) {
-    logFile << "Luchó con " << enemyName <<endl;
+    logFile << "Lucho con " << enemyName <<endl;
 }
 
 void Logger::logCombatResult(const string& result) {

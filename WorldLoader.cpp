@@ -8,7 +8,7 @@ unique_ptr<DamageStrategy> WorldLoader::makeStrategy(const string& type, int max
     if (type == "sword") return make_unique<SwordStrategy>();
     if (type == "bow")   return make_unique<BowStrategy>();
     if (type == "spell") return make_unique<SpellStrategy>(maxMana);
-    throw runtime_error("Error en " + file + " linea " + to_string(lineNum) + ": tipo de arma desconocido '" + type + "' (use sword, bow o spell)");
+    throw runtime_error("Error tipo de arma desconocido");
 }
 
 void WorldLoader::loadConfig(const string& path, World& world) {
@@ -63,8 +63,8 @@ void WorldLoader::loadConfig(const string& path, World& world) {
         throw runtime_error("Error en " + path + ": falta la clave 'sala_inicial'");
     }
 
-    auto fists = make_unique<Weapon>("Punios", 3, make_unique<SwordStrategy>());
-    auto noArmor = make_unique<Armor>("Sin Armadura", 0);
+    auto fists = make_unique<Weapon>("Punios", 4, make_unique<SwordStrategy>());
+    auto noArmor = make_unique<Armor>("Chaleco de hojas", 5);
     world.setKnight(make_unique<Knight>(knightName, knightDesc, knightHealth, knightMaxHealth, knightGold, move(fists), move(noArmor), knightBandages));
 }
 
@@ -91,7 +91,7 @@ void WorldLoader::loadWorld(const string& path, World& world) {
         getline(ss, connsField);
 
         if (id.empty() || type.empty() || desc.empty()) {
-            throw runtime_error("Error en " + path + " linea " + to_string(lineNum) + ": formato invalido (se esperan al menos 3 campos separados por '|')");
+            throw runtime_error("Error tipo de arma desconocido");
         }
 
         auto room = make_unique<Room>(id, type, desc);

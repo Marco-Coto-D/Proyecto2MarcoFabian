@@ -172,7 +172,7 @@ void SimulationEngine::runCombat(Enemy *enemy, Room *room) {
             goblinsKilled++;
             knight.addGold(gold);
             cout << "El goblin caido suelta una pequena bolsa con " << gold << " de oro." << endl;
-            logger.logInteraction("Recogió " + to_string(gold) + " de oro del goblin caído");
+            logger.logInteraction("Recogio " + to_string(gold) + " de oro del goblin caido");
         } else if (isMageEnemy) {
             magesKilled++;
         } else if (isVictory) {

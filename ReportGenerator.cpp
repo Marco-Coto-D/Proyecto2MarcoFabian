@@ -25,8 +25,8 @@ void ReportGenerator::generate( const string& filename, bool victory, const Knig
     report << "Oro: " << knight.getGold()<<endl;
     report << "Vendajes: " << knight.getBandages()<<endl<<endl;
 
-    report << "Arma equipada: " << knight.getEquippedWeapon().getName() << " (daño base: " << knight.getEquippedWeapon().getBaseDamage() << ")" <<endl;
-    report << "Armadura equipada: " << knight.getEquippedArmor().getName() << " (reducción: " << knight.getEquippedArmor().getDamageReduction() << ")" <<endl<<endl;
+    report << "Arma equipada: " << knight.getEquippedWeapon().getName() << " (dano base: " << knight.getEquippedWeapon().getBaseDamage() << ")" <<endl;
+    report << "Armadura equipada: " << knight.getEquippedArmor().getName() << " (reduccion: " << knight.getEquippedArmor().getDamageReduction() << ")" <<endl<<endl;
 
     report << "Inventario de armas:"<<endl;
     const auto& inv = knight.getInventory();
@@ -35,18 +35,18 @@ void ReportGenerator::generate( const string& filename, bool victory, const Knig
     } else {
         for (int i = 0; i < (int)inv.size(); i++) {
             report << "  - " << inv[i]->getName()
-                   << " (daño base: " << inv[i]->getBaseDamage() << ")"<<endl<<endl;
+                   << " (dano base: " << inv[i]->getBaseDamage() << ")"<<endl<<endl;
         }
     }
 
-    // Statistics
-    report << "=== ESTADÍSTICAS ===" <<endl;
+
+    report << "=== ESTADiSTICAS ===" <<endl;
     report << "Goblins derrotados: " << goblinsKilled <<endl;
     report << "Magos derrotados: " << magesKilled <<endl;
     report << "Dragones derrotados: " << dragonsKilled <<endl;
     report << "Total de turnos jugados: " << turnCount <<endl<<endl;
 
-    report << "Salas visitadas (en orden cronológico):" << endl;
+    report << "Salas visitadas (en orden cronologico):" << endl;
     for (int i = 0; i < (int)visitedRooms.size(); i++) {
         report << "  - " << visitedRooms[i] <<endl;
     }
